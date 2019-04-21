@@ -6,7 +6,7 @@
 |------|----|-------|
 |group_name|string|null: false, foreign_key: true|
 
-###Associaton
+### Associaton
 - has_many :members
 - has_many :users, through: :members
 - has_many :messages
