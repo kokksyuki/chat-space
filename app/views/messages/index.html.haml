@@ -1,0 +1,49 @@
+.wrapper
+
+  = render partial: 'messages/side_bar'
+
+  .chat
+    .header
+      .left-header
+        .left-header__title
+          グループ名
+        %ul.left-header__members
+          Member:
+          %li.member
+            メンバー名
+          %li.member
+            メンバー名
+          %li.member
+            メンバー名
+      .right-header
+        .right-header__button
+          Edit
+    
+    .messages
+      .message
+        .upper-info
+          %p.upper-info__user
+            ユーザー名
+          %p.upper-info__date
+            2019/5/1
+        .main-message
+          .main-message__text
+            こんにちは
+      .message
+        .upper-info
+          %p.upper-info__user
+            ユーザー名
+          %p.upper-info__date
+            2019/5/1
+        .main-message  
+          .main-message__text
+            こんにちは      
+
+    .form
+      %form
+        %input.form__message
+          .form__photo
+            %label.form__photo__image
+              = fa_icon 'picture-o', class: 'icon'
+              %input.hidden{type: 'file'}
+          %input.form__submit{type: 'submit', value: 'Send'}
