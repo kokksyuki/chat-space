@@ -20,24 +20,7 @@
           Edit
     
     .messages
-      .message
-        .upper-info
-          %p.upper-info__user
-            ユーザー名
-          %p.upper-info__date
-            2019/5/1
-        .main-message
-          .main-message__text
-            こんにちは
-      .message
-        .upper-info
-          %p.upper-info__user
-            ユーザー名
-          %p.upper-info__date
-            2019/5/1
-        .main-message  
-          .main-message__text
-            こんにちは      
+      = render partial: 'message', collection: @messages
 
     .form
       = form_for [@group, @message] do |f|
